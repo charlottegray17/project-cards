@@ -1,0 +1,167 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background: url("../img/backdrop.jpg");
+  background-size: auto;
+  background-position: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.project-wrap {
+  width: 95vw;
+  display: flex;
+  flex-flow: wrap;
+  align-content: center;
+  justify-content: center;
+
+}
+
+.flip-card-container {
+  width: 500px;
+  height: 450px;
+  perspective: 1000px;
+  margin: 40px;
+}
+
+#flip-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+/*Reveal card back on click*/
+#rotate-input-1 {
+  display: none;
+}
+
+#rotate-input-1:checked + label #flip-card {
+  transform: rotateY(180deg); /* <=>  rotateY(.5turn) */
+}
+
+#rotate-input-2 {
+  display: none;
+}
+
+#rotate-input-2:checked + label #flip-card {
+  transform: rotateY(180deg); /* <=>  rotateY(.5turn) */
+}
+
+#rotate-input-3 {
+  display: none;
+}
+
+#rotate-input-3:checked + label #flip-card {
+  transform: rotateY(180deg); /* <=>  rotateY(.5turn) */
+}
+
+#rotate-input-4 {
+  display: none;
+}
+
+#rotate-input-4:checked + label #flip-card {
+  transform: rotateY(180deg); /* <=>  rotateY(.5turn) */
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border-radius: 0.5rem; */
+}
+
+/*Styling the front of card*/
+
+.flip-card-front {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+}
+
+.card-front-title {
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  background: #517fa4;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.card-front-image img {
+  width: 100%;
+  height: 100%;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+/*Styling the back of card*/
+
+.flip-card-back {
+  background-color: #3d6280;
+  color: #fff;
+  transform: rotateY(180deg);
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.flip-card-back p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 40px;
+  max-width: 415px;
+}
+
+/*******PROJECT*****/
+
+/*******STYLING OG ORIGINAL PROJECT CARD*****/
+/*.project-card {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 650px;
+  grid-template-rows: 50px 400px;
+  grid-template-areas: "title" "image";
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+}
+
+.title {
+  grid-area: title;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  background: #54888a;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+
+}
+
+.image {
+  grid-area: image;
+  background: url("../img/pantry-preview.png");
+  background-size: cover;
+  background-position: right;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+
+}*/
